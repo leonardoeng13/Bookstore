@@ -41,14 +41,6 @@ By building this application, I learned how to use React and Redux.
 
 </br>
 
-<!-- <div align="center">
-<kbd>
-  <img alt="math" src="https://user-images.githubusercontent.com/80895497/134748890-29d5e63a-e1e4-4438-b23b-244824012a17.png">
-  </kbd>
-  </div>
- </br> -->
-
-
 ## Built With
 
 - JSX, JavaScript with ES6
@@ -59,8 +51,8 @@ By building this application, I learned how to use React and Redux.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## How to run this proiject:
-- git clone "your repo"
+## How to run this project:
+- git clone ["feature/components"] (https://github.com/leonardoeng13/Bookstore/tree/feature/components)
 - cd into the folder
 - git checkout "branch-name"
 - run "npm i"
