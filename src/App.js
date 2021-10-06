@@ -1,9 +1,12 @@
 import React from 'react';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+} from 'react-router-dom';
 import Books from './components/Books';
 import Categories from './components/Categories';
 import NavbarComponent from './components/Navbar';
-import FormComponent from './components/Form';
 import './App.css';
 
 const App = () => (
@@ -16,9 +19,8 @@ const App = () => (
             <Route path="/categories">
               <Categories />
             </Route>
-            <Route exact path="/">
+            <Route path="/">
               <Books />
-              <FormComponent />
             </Route>
           </Switch>
         </div>

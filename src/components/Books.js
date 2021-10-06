@@ -1,22 +1,47 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import { v4 as uuidv4 } from 'uuid';
 import Book from './Book';
+import FormComponent from './Form';
+import { createBook, removeBook, getBook } from '../redux/books/books';
 
 const Books = () => {
-  const booksInfo = [
-    { category: 'Action', title: 'The Hunger Games', author: 'Suzanne Colins' },
-    { category: 'Romance', title: 'Love hero', author: 'Tom Cruise' },
-    { category: 'Science fiction', title: 'the other world', author: 'Winston' },
-  ];
+  const dispatch = useDispatch();
+  const booksData = useSelector((state) => state.booksReducer);
 
-  const booksCard = booksInfo.map((book) => (
-    <Book category={book.category} title={book.title} author={book.author} key={uuidv4()} />
+  useEffect(() => {
+    dispatch(getBook());
+  }, []);
+
+  const submitBookToStore = (book) => {
+    const newBook = {
+      item_id: uuidv4(),
+      title: book.title,
+      category: book.category,
+    };
+    // dispatch an action and pass it the newBook object (your action's payload)
+    dispatch(createBook(newBook));
+  };
+
+  const deleteBook = (book) => {
+    dispatch(removeBook(book.item_id));
+  };
+
+  const booksList = booksData.map((book) => (
+    <Book
+      title={book.title}
+      category={book.category}
+      key={booksData.indexOf(book)}
+      rmvBook={() => {
+        deleteBook(book);
+      }}
+    />
   ));
-
   return (
 
     <div className="books">
-      {booksCard}
+      { booksList }
+      <FormComponent submitBook={submitBookToStore} />
     </div>
   );
 };
