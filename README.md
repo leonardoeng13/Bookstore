@@ -59,6 +59,13 @@ By building this application, I learned how to use React and Redux.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## How to run this proiject:
+- git clone "your repo"
+- cd into the folder
+- git checkout "branch-name"
+- run "npm i"
+- run "npm start"
+
 ## Available Scripts
 
 In the project directory, you can run:
