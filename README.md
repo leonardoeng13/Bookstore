@@ -127,7 +127,7 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 
 # Author
 
-👤 **Ellaouzi Hamza**
+👤 **Leonardo de Andrade**
 
 - GitHub: [leonardoeng13](https://github.com/leonardoeng13)
 - LinkedIn : [Leonardo de Andrade](https://www.linkedin.com/in/leonardodeandrade/)
