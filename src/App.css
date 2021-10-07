@@ -78,6 +78,7 @@
   border-right: solid 1px #e8e8e8;
   margin-right: 70px;
   padding-right: 20px;
+  background-image: url('./media/bg-progress.png');
   background-repeat: no-repeat;
   background-size: contain;
   height: 100%;
